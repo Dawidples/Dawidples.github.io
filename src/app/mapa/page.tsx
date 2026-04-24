@@ -18,7 +18,7 @@ export default function MapaPage() {
               <span className="text-sm font-semibold text-foreground">Mapa en vivo</span>
             </div>
             <a
-              href="http://46.101.222.114:8100"
+              href="https://mapa.polakcraft.me"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-panel inline-flex rounded-full px-4 py-2.5 text-sm font-medium text-muted-strong transition-colors hover:text-foreground"
@@ -29,7 +29,7 @@ export default function MapaPage() {
 
           <div className="overflow-hidden rounded-[2rem]">
             <iframe
-              src="http://46.101.222.114:8100"
+              src="https://mapa.polakcraft.me"
               className="h-[78vh] min-h-[640px] w-full border-none bg-background"
               title="PolakCraft BlueMap"
               allowFullScreen
