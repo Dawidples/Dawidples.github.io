@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import CopyIPButton from "@/components/CopyIPButton";
+import ServerTimeWidget from "@/components/ServerTimeWidget";
 
 const featureCards = [
   {
@@ -93,13 +94,17 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                {quickStats.map((item) => (
-                  <div key={item.label} className="glass-panel rounded-2xl px-5 py-4 border border-white/5 shadow-lg">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted">{item.label}</p>
-                    <p className="mt-1.5 text-lg font-bold text-foreground">{item.value}</p>
-                  </div>
-                ))}
+              <div className="mt-10 flex flex-col gap-6">
+                <ServerTimeWidget />
+                
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {quickStats.map((item) => (
+                    <div key={item.label} className="glass-panel rounded-2xl px-5 py-4 border border-white/5 shadow-lg">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted">{item.label}</p>
+                      <p className="mt-1.5 text-lg font-bold text-foreground">{item.value}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
 
